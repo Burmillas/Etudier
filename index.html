@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETUDIER — Minha rotina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#" data-page="overview" aria-label="ETUDIER, início">
+      <span class="brand-mark"><span>e</span></span>
+      <span><strong>ETUDIER</strong><small>Organize seu tempo</small></span>
+    </a>
+    <nav class="nav" aria-label="Menu principal">
+      <button class="nav-item active" data-page="overview"><span class="nav-icon">⌂</span><span>Visão geral</span></button>
+      <button class="nav-item" data-page="routine"><span class="nav-icon">▦</span><span>Minha rotina</span></button>
+      <button class="nav-item" data-page="tasks"><span class="nav-icon">✓</span><span>Tarefas</span></button>
+      <button class="nav-item" data-page="commitments"><span class="nav-icon">◷</span><span>Compromissos</span></button>
+      <button class="nav-item" data-page="work"><span class="nav-icon">▣</span><span>Escala de trabalho</span></button>
+      <button class="nav-item" data-page="classes"><span class="nav-icon">▤</span><span>Horários das aulas</span></button>
+      <button class="nav-item" data-page="recurring"><span class="nav-icon">↻</span><span>Atividades recorrentes</span></button>
+    </nav>
+    <div class="sidebar-tip"><span>✦</span><p><strong>Dica da semana</strong>Reserve 15 minutos para planejar o dia seguinte.</p></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-button" id="menuButton" aria-label="Abrir menu">☰</button>
+      <div class="topbar-actions">
+        <button class="icon-button" id="notificationButton" aria-label="Notificações">♢<span class="notification-dot"></span></button>
+        <button class="profile-button" aria-label="Perfil">E</button>
+      </div>
+    </header>
+    <section id="app"></section>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-header"><h2 id="modalTitle"></h2><button id="modalClose" aria-label="Fechar">×</button></header>
+      <div id="modalBody"></div>
+    </section>
+  </div>
+  <div class="toast-stack" id="toastStack"></div>
+  <script src="app.js"></script>
+</body>
+</html>
