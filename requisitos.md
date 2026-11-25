@@ -1,21 +1,11 @@
 # Backlog do Produto
 
-| ID | Título | Responsável | Prioridade | Pontos | Depende de |
-|---|---|---|---|---|---|
-| HU01 | Gerenciar horários das aulas | Gabriel Bezerra | Must | 3 | - |
-| HU02 | Gerenciar escalas de trabalho | Janilson | Must | 5 | - |
-| HU03 | Gerenciar compromissos fixos | João Gabriel | Must | 5 | - |
-| HU04 | Gerenciar atividades recorrentes | João Gabriel | Should | 5 | - |
-| HU05 | Gerenciar tarefas | Matheus | Must | 5 | - |
-| HU06 | Gerar rotina semanal automatizada | Camila | Must | 8 | HU01 a HU05 |
-| HU07 | Painel de pendências | Matheus | Should | 5 | HU05, HU06 |
-
-## HU01 – Gerenciar horários das aulas
-
-- **Responsável:** Gabriel Bezerra
-- **Descrição:** Como estudante trabalhador, quero cadastrar os horários das minhas disciplinas, para que a rotina semanal respeite meus horários de aula.
-- **CA1 – Cadastro válido:** Dado que informei nome, dia, início e término diferentes, quando confirmo, então a disciplina aparece na listagem e o sistema informa que foi salva.
-- **CA2 – Horários iguais:** Dado que início e término são idênticos, quando confirmo, então o sistema bloqueia o salvamento e pede horários diferentes.
-- **CA3 – Exclusão:** Dado que escolhi excluir uma disciplina, quando confirmo a exclusão, então ela some da listagem e os planejamentos anteriores são invalidados.
-- **Regras de negócio:** campos obrigatórios (nome, dia, início, término); local é opcional.
-- **Rastreabilidade:** Documento de Visão, seções 5.2 e 5.3.
+| ID | Título | Valor de Negócio | Prioridade (MoSCoW) | Estimativa (Esforço) | Dependências |
+| --- | --- | --- | --- | --- | --- |
+| **HU05** | Gerenciar tarefas | **Alto** — Centraliza demandas com prazo, duração e prioridade para evitar atrasos nas entregas. | Must Have | 3 | Nenhuma |
+| **HU02** | Gerenciar escalas de trabalho | **Alto** — Registra turnos únicos, semanais ou mensais, intervalos e deslocamentos do estudante trabalhador. | Must Have | 5 | Nenhuma |
+| **HU03** | Gerenciar compromissos fixos | **Alto** — Bloqueia períodos indisponíveis na semana e impede sobreposição de horários fixos. | Must Have | 3 | Nenhuma |
+| **HU01** | Gerenciar horários das aulas | **Alto** — Registra disciplinas, dias da semana e horários acadêmicos para conciliação com o trabalho. | Must Have | 2 | Nenhuma |
+| **HU06** | Gerar rotina semanal automatizada | **Muito Alto** — Distribui automaticamente as tarefas pendentes nos intervalos livres da semana sem conflitos. | Must Have | 8 | HU01, HU02, HU03, HU04 e HU05 |
+| **HU04** | Gerenciar atividades recorrentes | **Médio-Alto** — Automatiza hábitos e sessões periódicas de estudo em dias definidos da semana. | Should Have | 3 | Nenhuma |
+| **HU07** | Acompanhar visão geral e painel de pendências | **Médio-Alto** — Exibe indicadores de progresso, próximas entregas e atalhos rápidos na tela inicial. | Should Have | 3 | HU03, HU05 |
